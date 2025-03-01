@@ -1,0 +1,21 @@
+.wrapper{
+      display:grid;
+      border:3px solid orange;
+      grid-template-columns: 5rem 5rem 5rem;
+      background-color: aqua;
+      grid-gap:3px;
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.wrapper > div {
+      padding:3rem;
+      background-color: brown;
+}
+
+.four{
+      grid-column: span 2;
+}
+
+.two{
+      grid-column: span 3;
+}

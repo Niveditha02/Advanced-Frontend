@@ -1,0 +1,33 @@
+html{
+      box-sizing: border-box;
+}
+
+*,*:before,*after{
+      box-sizing: inherit;
+}
+#parent{
+      /*flex container*/
+      border: solid red 10px;
+      display:flex;
+      flex-direction: row-reverse;
+      /* flex-direction: column-reverse; */
+      /* flex-flow: row nowrap; */
+      /* flex-wrap: row wrap; */
+      height:500px;
+      justify-content: space-evenly;/*to arrange the content on main-axis(i,e flex-direction)*/
+      align-items: start;
+}
+
+#parent div{
+      /*flex items*/
+      border: solid blue 2px;
+      padding: 20px;
+      background-color: bisque;
+      min-width: 100px;
+      max-width: 280px;
+      /* min-height:100px; */
+}
+
+#child1{
+      flex-basis:50%;
+}

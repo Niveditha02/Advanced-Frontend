@@ -1,0 +1,62 @@
+h2{
+      font-size: 30px; /* This is type selector , u write html element type */
+
+}
+
+*{
+      background-color: #ffd393; /*{ this is universal selector*/
+}
+header,
+body,
+div{
+      background-color: #ffd393; /*selector list*/
+}
+.mid-text /*we use . to define class name*/
+{
+      font-weight: bolder;
+      font-size: medium;
+}
+
+#headtext{
+      text-decoration-style:underline;/*we use this to define id*/
+}
+
+input[disabled]{
+      background-color: beige; /*attribute selector*/
+}
+
+div span{
+      color:cadetblue;/*descendent selector*/
+}
+
+div > .extra{
+      text-decoration-line: underline;/* child combinator selects direct child of div element*/
+}
+
+h2 ~h4{
+      color:chocolate; /* general sibling combinater h4 contents got changed to golden color*/
+}
+
+h4 + p{
+      color:blue; /*adjacent sibling combinater(when you paste p tag below h4*/
+      font-style:italic;
+}
+
+a:visited{
+      color:red;/*pseudo class i,e hover is not present in html doc if hover on crest underline vanishes*/ 
+}
+
+div::before{
+      content:'..'; /*pseudo elements need not be part of the html element*/
+}
+
+div::after{
+      content:'..';/*pseudo elements need not be part of html doc*/
+}
+
+#demo{
+      width:200px;
+      border: solid red 5px;/*border box property*/
+      padding:5px;
+      margin-bottom: 10px;
+}

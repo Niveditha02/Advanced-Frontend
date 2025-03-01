@@ -1,0 +1,168 @@
+html{
+      box-sizing:border-box;
+}
+
+*,*::after,*::before{
+      box-sizing:inherit;
+}
+
+/*making circular loader*/
+.loader1{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      height:5rem;
+}
+
+.loader1 > div {
+      border:5px solid red;
+      width:4rem;
+      height:4rem;
+      border-top: 5px solid grey;
+      border-radius:50%;
+      animation:spinner1 2s linear infinite;
+      animation-direction:alternate;
+}
+
+@keyframes spinner1{
+      from{
+            transform:rotate(0);
+      }
+      to{
+            transform:rotate(360deg);
+      }
+}
+
+/*variation of circular spinner loader*/
+.loader2{
+      display:flex;
+      height:5rem;
+      align-items: center;
+      justify-content: center;
+
+}
+.loader2 > #variation{
+      border:5px solid red;
+      width:50px;
+      height: 50px;
+      border-radius: 50%;
+      animation:spinner2 1s linear infinite;
+      animation-direction: reverse;
+      border-top:5px solid white;
+      border-bottom: 5px solid white;
+}
+
+@keyframes spinner2{
+      from{
+            tranform:rotate(0deg);
+      }
+      to{
+            transform:rotate(180deg);
+      }
+}
+
+/*making vertical expanding loader*/
+
+.loader3{
+      display:flex;
+      height:5rem;
+      justify-content: center;
+      align-items: center;
+      gap:2rem;
+}
+
+.loader3 div{
+      background-color: green;
+      height:100px;
+      width:30px; 
+}
+
+.loader3 .solid1{
+      animation:expander 4s linear infinite;
+      animation-delay:0.1s;
+}
+
+.loader3 .solid2{
+      animation:expander 4s linear infinite;
+      animation-delay:1s; /* when solid2 reaches 150px then wait 1s and start solid3 to become 100px*/
+}
+
+.loader3 .solid3{
+      animation:expander 4s linear infinite;
+      animation-delay:2s;
+}
+
+.spacer{
+      height: 128px;
+}
+
+@keyframes expander{
+      0%{
+            height:100px;
+      }
+      50%{
+            height:150px;
+      }
+      100%{
+            height:100px;
+      }
+}
+
+.loader4{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:5rem;
+}
+
+.loader4 > div{
+      border:5px solid rgb(255, 0, 166);
+      width:4rem;
+      height:4rem;
+      border-radius:50%;
+      animation:drop 2s linear infinite;
+      animation-direction:normal;
+}
+
+@keyframes drop{
+      0%{
+            transform:scale(1, 1);
+            border-color:grey;
+            opacity:1;
+      }
+
+      15%{
+            opacity:0;
+      }
+
+      25%{
+            transform:scale(1.5, 1.5);
+            border-color:rgb(45, 45, 45);
+            opacity:1;
+      }
+      35%{
+            opacity:0;
+      }
+      50%{
+            transform:scale(2,2);
+            border-color:bisque;
+            opacity:1;
+      }
+      65%{
+            opacity:0;
+      }
+      75%{
+            opacity:1;
+      }
+
+      85%{
+            opacity:0;
+      }
+      100%{
+            transform:scale(1,1);
+            border-color: grey;
+            opacity:1;
+      }
+}
+
+

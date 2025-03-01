@@ -1,0 +1,98 @@
+:root{
+      --beige:#dec2bc;
+      --grey:#a6aab0;
+
+}
+
+*,**::after,**::before{
+      box-sizing: inherit;
+}
+
+nav{
+      padding:0rem;
+      font-size: 90%;
+}
+
+nav a:hover{
+      color:aqua;
+}
+
+nav ul{
+      display:flex;
+      flex-direction: row;
+      flex-flow:nowrap;
+      padding:0;
+      margin:0;
+
+}
+
+nav li{
+      list-style-type: none;
+      padding:0;
+      margin-right:3px;
+      flex-basis: 100%;
+}
+
+nav a{
+      text-decoration: none;
+      color:black;
+}
+
+#gradient-section{
+      height: 2px;
+      background:linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(166,170,176,1) 100%);
+}
+
+#profileimage{
+      max-width: 5%;
+      height:0.5rem;
+}
+
+.circleimg{
+      max-width: 100px;
+      -webkit-border-radius: 150px;/* is prefix used to make square img round*/
+      border-radius: 150px;
+}
+
+#profilename li{
+      list-style-type: none;
+      margin-left:7rem;
+      font-size:15px;
+      color:darkgray;
+      flex-basis: 100%;
+}
+
+.Name{
+      font-weight: bold;
+      color:black;
+      margin-left:1rem;
+}
+
+#info{
+      font-size:17px;
+      margin-left:7rem;
+}
+
+@media(min-width:600px){
+     .Name,#profilename li{
+      flex-grow: 1;
+      flex-basis:auto;
+     } 
+}
+
+.likeimg{
+      max-width: 15%;
+      padding:0;
+}
+
+.Commentimg{
+      max-width: 15%;
+}
+
+.Repostimg{
+      max-width: 15%;
+}
+
+.sendimg{
+      max-width:15%;
+}

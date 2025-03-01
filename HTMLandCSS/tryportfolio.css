@@ -1,0 +1,164 @@
+:root{
+      --teal:#031634;
+      --cobalt:#033649;
+      --turquoise:#066464;/*--variablename is declared using -- in css and it is not a css property*/
+      --beige:#CEB280;
+      --gold:#EADDCC;
+}
+
+html{
+      box-sizing: border-box;
+}
+
+*,*::after,*::before{
+      box-sizing: inherit;
+}
+
+.section-turquoise{
+      background-color: var(--turquoise);
+}
+
+body{
+      background-color: var(--teal);
+      color:white;
+      margin:0;
+      padding:0;
+}
+
+#Intro{
+      padding-bottom:4rem 1rem 10rem 1rem ;/*i,e trbl  */
+      max-width: 1200px;/*this in this code is used to bring intro section quite right*/
+      margin:0 auto;
+}
+
+#Intro p{
+      font-size:1.5rem;
+      line-height: 1.5;
+}
+
+.Name span{
+      display:block;
+      color:white;
+      font-size: 4rem;
+}
+
+#experiance{
+      display:flex;
+      justify-content: space-around;
+      align-items: center;
+}
+
+#experiance ul{
+      margin:0;
+      padding:0;
+      font-size: 1rem;
+      max-width: 300px;
+      /*gap:3rem;*/
+      border:solid white 0.5px;
+      background-color: var(--turquoise);
+}
+
+#experiance li{
+      list-style-type: none;
+      padding:1rem;
+}
+
+#experiance a{
+      color:white;
+}
+
+#hire{
+      background-color: var(--turquoise);
+      text-align: center;
+      margin:0 auto;
+      padding:3rem 0;
+}
+
+#hire p:last-child{
+      margin-top: 3rem;
+}
+
+nav{
+      font-size:90%;
+      padding:0rem;/*By changing values of padding u can actually change the space color i,e given in nav ul*/
+}
+
+nav a{
+      color:white;
+      text-decoration: none;
+      font-size: 1.2rem;
+}
+
+nav ul{
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
+      gap:2rem;
+      padding:0;
+      flex-flow: row wrap;/* this is basically used when you want mobile size screen*/
+      margin:0;
+      display:flex;
+      background-color: var(--cobalt);
+}
+
+nav li:first-child{
+     /*flex-grow:1; we will use media query to bring this back*/
+     font-size: 1.5rem;
+     margin-left: 3rem;
+     flex-basis: 100%;/*flex-basis can be given to the child of the first parent*/
+}
+
+nav a:hover{
+      color:var(--beige);
+      font-size: 1.2rem;
+      text-decoration: underline;
+}
+
+.button{
+     list-style-type: none;
+     background-color: orange;
+     padding:0.5rem;
+     border-radius: 5px;/*this gives proper box shape i,e u on the ends*/
+}
+
+.button:hover{
+      color:white;
+      background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,29,9,0.9556197478991597) 9%, rgba(0,212,255,1) 100%);;
+}
+
+@media(min-width:600px){
+      nav li:first-child{
+            /*font-size: 1.5rem;
+            margin-left: 3rem;this not needed when using media queries and breakpoints*/
+            flex-grow:1;
+            flex-basis:auto;
+       }
+}
+
+/*Adding special unicodes(i,e gradient between experiance and hire)This basically acts as segration between two sections*/
+.gradient-section{
+      height:2px;
+      background:linear-gradient(90deg, rgb(101, 99, 128) 0%, rgba(218, 48, 10, 0.956) 9%, rgb(157, 157, 157) 100%);;
+}
+
+.mypicture{
+      max-height: 400px;
+      max-width:250px;
+}
+
+.mypicture img{
+      width:100%;
+      margin:1rem;
+}
+
+footer{
+      text-align: center;
+      padding:2rem 0;
+}
+
+#experiance-header{
+      margin:0 auto;
+      font-size: 2rem;
+      width: 200px;
+      padding:1rem;
+}

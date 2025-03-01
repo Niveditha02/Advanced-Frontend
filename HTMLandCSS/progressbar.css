@@ -1,0 +1,26 @@
+html{
+      box-sizing:border-box;
+} 
+
+ *,*::after,*::before{
+      box-sizing: inherit;
+}
+
+#Progress{
+      width:400px;
+      border:solid black 2px;
+      border-radius: 5px;
+      display:flex;/*this responsible for greenyellow flex only around text 75%*/
+}
+#progressbar{
+      background-color: greenyellow;
+      border-radius: 2px;
+      flex-basis:75%;/*this fill greenyellow color till the value you give in the flexbox*/
+}
+/*css for 75% to come center*/
+.progress{
+      width:5px;
+      margin:0 auto;
+}
+
+

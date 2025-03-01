@@ -1,0 +1,99 @@
+html{
+      box-sizing: border-box;
+}
+
+*,*::after,*::before{
+     box-sizing: inherit; 
+}
+
+.row{
+      display:flex;
+      justify-content: space-between;
+}
+.static{
+      width:100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50px;
+      align-items: center;
+}
+
+.moving{
+      width:50px;
+      height:50px;
+      border: 5px solid red;
+      background-color:blue;
+      border-radius:25px;
+      /* border-radius:25px;
+      align-items: center;
+      border-top:none; */
+      /* border-radius: 25px; */
+      /* transform:translateX(25px);*/
+      /* transform:rotate(45deg); */
+      /* transform:rotate(45deg)translateX(45px); */
+      transition:all;
+      animation-name: rotator;
+      animation-iteration-count: infinite;
+      animation-duration:5s;
+      animation-timing-function: ease-out;
+}
+
+/* @keyframes rotator{
+      from{
+            transform:rotate(0);
+            background-color: blue;
+      }
+      to{
+            transform:rotate(180deg);
+            background-color: red;
+      }
+} */
+
+@keyframes rotator{
+      0%{
+            transform:translateX(-500px);
+            /* transform:rotate(0); */
+            background-color: blue;
+      }
+      50%{
+            transform:translateX(500px);
+            background-color:green;
+      }
+      100%{
+            transform:translateX(-500px);
+            /* transform:rotate(180deg); */
+            background-color:red;
+      }
+}
+
+.moving:hover{
+      transform: rotate(180deg);
+      /* background-color:red;
+      transition-delay:0;
+      transition-duration: 5s;
+      transition-property: all;
+      transition-timing-function: ease-out; */
+      /* transition:all;
+      animation-name: rotator;
+      animation-iteration-count: infinite;
+      animation-duration:5s;
+      animation-timing-function: ease-out; */
+}
+
+/* button{
+      padding:1px 30px;
+      font-size: 15px;
+      margin: 4px 6px;
+      transform:scale(3,3);
+      transition-property: margin-right;
+      transition-duration: 5s;
+}
+button:hover{
+      transform:scale(2,2);
+      transition-delay: 5s;
+      align-items:center;
+      background-color: purple;
+      transition:margin-left;
+      margin-left: -10px;
+      border-radius:50px;
+}  */
