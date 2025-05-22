@@ -1,0 +1,17 @@
+class product {
+      constructor(n,p,d){
+            this.name = n;
+            this.price = p;
+            this.description = d;
+            //return 0; //primitive  no effect
+            //return {x: 10};
+            //return this; // if you dont return anything, it is equal to saying return this;
+      }
+      display(){
+
+      }
+}
+
+const p = new product('Bag',100, "a cool bag");//a new keyword will create brand new empty object
+console.log(p);
+//new product(); when we call class name with parenthesis you default call a constructor

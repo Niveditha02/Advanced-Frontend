@@ -1,0 +1,48 @@
+function download(url){
+      return new Promise(function exec(resolve,reject){
+            console.log("starting to download data from",url);
+            setTimeout(function down(){
+                  const content = "ABCDEF";
+                  resolve(content);
+            },4000);
+      })
+}
+
+function writeFile(data){
+      return new Promise(function exec(resolve, reject) {
+            setTimeout(function write(){
+                  const filename = "file.txt";
+                  resolve(filename);
+            },500);
+      })
+}
+
+function upload(file,url){
+      return new Promise(function exec(resolve,reject){
+            setTimeout(function uploading(){
+                  const response = "Success";
+                  resolve(response);
+            },1000);
+      })
+}
+
+async function steps(){
+      const downloadedData = await download("www.xyz.com");
+      console.log("data downloaded is",downloadedData);
+
+      const filewritten = await writeFile(downloadedData);
+      console.log("file written is",filewritten);
+
+      const uploadResponse = await upload(filewritten,"www.drive.google.com");
+      console.log("upload response is",uploadResponse);
+
+      return uploadResponse;
+}
+
+steps();
+
+
+
+
+
+

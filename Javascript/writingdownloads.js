@@ -43,7 +43,7 @@ function upload(url,file,cd){
 download("www.xyz.com",function processDownload(content){
       writeFilename(content,function processwrite(file){
             console.log("We have downloaded and written the file, now will upload");
-            upload("www.xyz.com",filename,function processUpload(response){
+            upload("www.xyz.com",file,function processUpload(response){
                   console.log("We have uploaded with",response);
             });
       });

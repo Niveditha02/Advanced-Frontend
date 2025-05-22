@@ -1,0 +1,59 @@
+function process(){
+      let i = 0;
+      function innerprocess(){
+            i+=1;//this i is coming from the process scope
+            return i;
+      }
+      return innerprocess;
+}
+let res = process();
+console.log(res);
+console.log("first time calling res",res());
+console.log("second time calling res",res());
+console.log("third time calling res",res());
+
+//second example for closures, closures means function remembers its lexical scope even when the function is executed outside of the lexical scope
+function process1(){
+      let i1=0;
+      let j1=[1,2,3];
+      let k1=10;
+      function innerprocess1(){
+            i1+=1;
+            console.log(j1);
+            return i1;
+      }
+      return innerprocess1;
+}
+let result1 = process1();
+console.log(result1);
+console.log("first time calling function",result1());
+console.log("second time calling function",result1());
+
+//case 2
+function fetchelementarray(array){
+      let idx1 = 0;
+      function next1(){
+            if(idx1 < array.length){
+                  return{
+                  value : array[idx1++],
+                  done : false
+            };
+      }
+      else{
+            return{
+                  value : undefined,
+                  done :true
+            };
+      }
+}
+return next1;
+}
+
+const automaticfetcher1 = fetchelementarray([1,2,3,4,5])
+console.log(automaticfetcher1());
+console.log(automaticfetcher1());
+console.log(automaticfetcher1());
+console.log(automaticfetcher1());
+
+
+

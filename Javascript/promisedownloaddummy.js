@@ -9,12 +9,6 @@ function download(url){
       });
 }
 
-// download("www.xyz.com")
-// .then(function fulfillhandler(value){
-//       console.log("content downloaded is",value);//here using promises we are not giving access to te third paty function like as in example callbackdownload.js
-// })
-
-//dot.then chaining is whatever the value of the first promise handler next is the value of the second promise handler
 x = download("www.xyz.com");
 x.
 then(
