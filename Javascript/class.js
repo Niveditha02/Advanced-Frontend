@@ -15,3 +15,4 @@ class product{
 
 //syntax to create object
 const p = new product();
+

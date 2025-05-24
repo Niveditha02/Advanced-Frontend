@@ -21,32 +21,6 @@ let motorolla = {
 samsung.display();
 motorolla.display();
 
-// let products = {
-//       arr:[
-//             {
-//             name:"Samsung",
-//             price:10000,
-//             description:"The samsung phone is samsung galaxy M12",
-//             ratings:4.3,
-//             getcategory:()=>{console.log(this.category);}
-//       },
-//       {
-//             name: "motorolla",
-//             price: 120000,
-//             decription:"The motorolla phone is motoralla g12",
-//             ratings:4.4,
-//             getcategory: ()=>{console.log(this.category);}
-//       }
-//       ],
-//       category:"Electronics",
-//       getProducts: function (){
-//             //console.log(this.arr);
-//             return this.arr;
-//       }
-// }
-// products.getProducts()[0].getcategory();
-
-//different use of this using arrow
 //case 1: this using function
 const iphone = {
       name: "iphone",

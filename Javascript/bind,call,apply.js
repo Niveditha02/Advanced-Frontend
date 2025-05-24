@@ -1,4 +1,3 @@
-
 //case 1: Bind()
 const player1 = {
       firstname: 'Virat',
@@ -27,19 +26,19 @@ x();// obj is trying to access this, we can bind this of obj to another obj. Thi
 //Then you do console.log(this.getDetails()), which becomes console.log(undefined).
 
 //call(),apply()
-const player2 = {
-      firstname1:'Hardik',
-      lastname1:'Pandya',
-      numberToBBat1:4,
-      getDetails1:function(){
-            console.log(this.firstname1,this.lastname1,"comes at no",this.numberToBBat1);
-      }
-}
+// const player2 = {
+//       firstname1:'Hardik',
+//       lastname1:'Pandya',
+//       numberToBBat1:4,
+//       getDetails1:function(){
+//             console.log(this.firstname1,this.lastname1,"comes at no",this.numberToBBat1);
+//       }
+// }
 
-const obj1 = function(x,y){
-      console.log(x+y);
-      this.getDetails1();
-}
+// const obj1 = function(x,y){
+//       console.log(x+y);
+//       this.getDetails1();
+// }
 
-obj1.call(player2,2,45); //in call function u can pass any argument function after obj function 
-obj1.apply(player2,[2,4]);
+// obj1.call(player2,2,45); //in call function u can pass any argument function after obj function 
+// obj1.apply(player2,[2,4]);
