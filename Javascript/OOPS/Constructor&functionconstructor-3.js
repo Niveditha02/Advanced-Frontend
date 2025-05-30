@@ -1,13 +1,14 @@
+//function constructor
 function product(n,p,d){
       this.name = n;
       this.price = p;
       this.description = d;
 }
-const p1 = new product("niveditha",50000,"I am quick learner");
+const p1 = new product("fridge",50000,"nice fridge");
 console.log(p1);
 
 
-//contructor function
+//contructor
 class Product {
   constructor(n, p, d) {
     this.name = n;
@@ -22,5 +23,5 @@ class Product {
 
 // Syntax to create an object
 const p = new Product("iphone", 5000, "nice phone");
-console.log(p);         // Logs the object
-p.display();            // Calls the display method
+console.log(p);         
+p.display();
